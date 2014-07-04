@@ -15,9 +15,6 @@
     <platform>cap-@DISTRIB_VERSION@</platform>
     <platform>cap-5.9.5</platform>
   </platforms>
-  <dependencies>
-    <package>nuxeo-dm</package>
-  </dependencies>
   <license>LGPL</license>
   <license-url>http://www.gnu.org/licenses/lgpl.html</license-url>
 </package>
