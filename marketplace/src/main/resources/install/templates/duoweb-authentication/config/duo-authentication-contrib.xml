@@ -15,10 +15,10 @@
                           class="org.nuxeo.duo.factors.DuoFactorsAuthenticator">
       <loginModulePlugin>Trusting_LM</loginModulePlugin>
       <parameters>
-        <parameter name="IKEY"></parameter>
-        <parameter name="SKEY"></parameter>
-        <parameter name="AKEY"></parameter>
-        <parameter name="HOST"></parameter>
+        <parameter name="IKEY">YOUR_INTEGRATION_KEY</parameter>
+        <parameter name="SKEY">YOUR_SECRET_KEY</parameter>
+        <parameter name="AKEY">YOUR_APPLICATION_KEY</parameter>
+        <parameter name="HOST">YOUR_API_HOSTNAME</parameter>
       </parameters>
     </authenticationPlugin>
   </extension>
