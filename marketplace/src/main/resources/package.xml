@@ -13,7 +13,6 @@
   <supported>true</supported>
   <platforms>
     <platform>cap-@DISTRIB_VERSION@</platform>
-    <platform>cap-5.9.5</platform>
   </platforms>
   <license>LGPL</license>
   <license-url>http://www.gnu.org/licenses/lgpl.html</license-url>

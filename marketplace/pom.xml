@@ -16,7 +16,7 @@
   <dependencies>
     <dependency>
       <groupId>org.nuxeo.ecm.distribution</groupId>
-      <artifactId>nuxeo-distribution-dm</artifactId>
+      <artifactId>nuxeo-distribution-cap</artifactId>
       <type>pom</type>
     </dependency>
     <dependency>
@@ -30,7 +30,7 @@
     <plugins>
       <plugin>
         <groupId>org.nuxeo.build</groupId>
-        <artifactId>ant-assembly-maven-plugin</artifactId>
+        <artifactId>nuxeo-distribution-tools</artifactId>
         <configuration>
           <buildFiles>
             <buildFile>${basedir}/src/main/assemble/assembly.xml</buildFile>
