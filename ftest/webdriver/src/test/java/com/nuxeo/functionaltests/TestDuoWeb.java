@@ -20,16 +20,23 @@ package com.nuxeo.functionaltests;
 
 import org.junit.Test;
 import org.nuxeo.functionaltests.AbstractTest;
-import org.nuxeo.functionaltests.pages.DocumentBasePage.UserNotConnectedException;
+import org.nuxeo.functionaltests.pages.DocumentBasePage;
+import org.nuxeo.functionaltests.pages.DocumentBasePage
+        .UserNotConnectedException;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
-/**
- * Tests login / logout.
- */
-public class ITLoginLogoutTest extends AbstractTest {
+import static junit.framework.TestCase.assertTrue;
+
+public class TestDuoWeb extends AbstractTest {
+
+    @FindBy(xpath = "//div[@id='duo_iframe']")
+    public WebElement duoWebIframe;
 
     @Test
-    public void testLoginLogout() throws UserNotConnectedException {
-        login();
-        logout();
+    public void testDuoWebDisplay() throws UserNotConnectedException {
+        getLoginPage().login("Administrator", "Administrator",
+                DocumentBasePage.class);
+        assertTrue(duoWebIframe.isDisplayed());
     }
 }
