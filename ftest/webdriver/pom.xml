@@ -57,10 +57,9 @@
               <goal>verify</goal>
             </goals>
             <configuration>
-              <argLine>
-                -Dlog4j.configuration=${file.uri.prefix}${basedir}/src/test/resources/log4j.xml
-                -Dnuxeo.log.dir=${build.directory}
-                -DsomePassword=${some.password}
+              <argLine>-Dlog4j.configuration=${file.uri.prefix}${basedir}/src/test/resources/log4j.xml
+                -Dnuxeo.log.dir=${project.build.directory}
+                ${it.failsafe.argLine}
               </argLine>
             </configuration>
           </execution>
@@ -68,7 +67,7 @@
       </plugin>
       <plugin>
         <groupId>org.nuxeo.build</groupId>
-        <artifactId>ant-assembly-maven-plugin</artifactId>
+        <artifactId>nuxeo-distribution-tools</artifactId>
         <configuration>
           <buildFile>${basedir}/itests.xml</buildFile>
         </configuration>
