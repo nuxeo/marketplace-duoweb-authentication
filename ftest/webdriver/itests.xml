@@ -22,7 +22,7 @@
           depends="_init,prepare-db,prepare-tomcat,prepare-jboss">
     <copy todir="${out.dir}">
       <artifact:resolveFile
-              key="com.nuxeo.marketplace.duoweb.authentication:marketplace-duoweb-authentication::zip"/>
+              key="org.nuxeo.marketplace.duoweb.authentication:marketplace-duoweb-authentication::zip"/>
     </copy>
   </target>
 
