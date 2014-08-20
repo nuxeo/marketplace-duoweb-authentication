@@ -10,7 +10,7 @@
 
   <artifactId>marketplace-duoweb-authentication</artifactId>
   <packaging>zip</packaging>
-  <name>DuoWeb Authentication Marketplace package</name>
+  <name>DuoWeb Authentication Marketplace Package</name>
 
   <dependencies>
     <dependency>
@@ -21,7 +21,6 @@
     <dependency>
       <groupId>org.nuxeo.duoweb.authentication</groupId>
       <artifactId>nuxeo-duoweb-authentication</artifactId>
-      <version>${nuxeo.distribution.version}</version>
     </dependency>
   </dependencies>
 

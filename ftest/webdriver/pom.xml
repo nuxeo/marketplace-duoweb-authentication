@@ -9,12 +9,8 @@
   </parent>
 
   <artifactId>webdriver</artifactId>
-  <name>Nuxeo DuoWeb Authentication functional tests with WebDriver</name>
-  <description>Nuxeo DuoWeb Authentication functional tests with WebDriver</description>
-
-  <properties>
-    <some.password>setTheValueInYourSettings</some.password>
-  </properties>
+  <name>DuoWeb Authentication WebDriver functional tests</name>
+  <description>DuoWeb Authentication WebDriver functional tests</description>
 
   <dependencies>
     <dependency>
@@ -58,8 +54,7 @@
             <configuration>
               <argLine>
                 -Dlog4j.configuration=${file.uri.prefix}${basedir}/src/test/resources/log4j.xml
-                -Dnuxeo.log.dir=${build.directory}
-                -DsomePassword=${some.password}
+                -Dnuxeo.log.dir=${project.build.directory}
               </argLine>
             </configuration>
           </execution>

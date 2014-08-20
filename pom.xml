@@ -10,7 +10,7 @@
   <groupId>org.nuxeo.marketplace.duoweb.authentication</groupId>
   <artifactId>parent</artifactId>
   <packaging>pom</packaging>
-  <name>DuoWeb Authentication Marketplace package</name>
+  <name>DuoWeb Authentication Marketplace Package parent</name>
   <version>1.1.1-SNAPSHOT</version>
 
   <properties>
@@ -73,12 +73,9 @@
   </repositories>
 
   <scm>
-    <connection>scm:git:git://github.com/nuxeo/nuxeo-marketplace-duoweb-authentication.git
-    </connection>
-    <developerConnection>
-      scm:git:ssh://git@github.com:nuxeo/nuxeo-marketplace-duoweb-authentication.git
-    </developerConnection>
-    <url>https://github.com/nuxeo/nuxeo-marketplace-duoweb-authentication</url>
+    <connection>scm:git:git://github.com/nuxeo/marketplace-duoweb-authentication.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com:nuxeo/marketplace-duoweb-authentication.git</developerConnection>
+    <url>https://github.com/nuxeo/marketplace-duoweb-authentication</url>
   </scm>
 
 </project>

@@ -6,15 +6,17 @@
   </description>
   <home-page>http://github.com/nuxeo/nuxeo-duoweb-authentication</home-page>
   <vendor>Nuxeo</vendor>
-  <installer restart="true"/>
-  <uninstaller restart="true"/>
+  <installer restart="true" />
+  <uninstaller restart="true" />
   <nuxeo-validation>nuxeo_certified</nuxeo-validation>
-  <production-state>testing</production-state>
+  <production-state>production_ready</production-state>
   <supported>true</supported>
   <platforms>
     <platform>cap-@DISTRIB_VERSION@</platform>
-    <platform>cap-5.9.5</platform>
   </platforms>
-  <license>LGPL</license>
-  <license-url>http://www.gnu.org/licenses/lgpl.html</license-url>
+  <license>LGPL 2.1</license>
+  <license-url>http://www.gnu.org/licenses/lgpl-2.1.html</license-url>
+  <dependencies>
+    <package>nuxeo-dm</package>
+  </dependencies>
 </package>

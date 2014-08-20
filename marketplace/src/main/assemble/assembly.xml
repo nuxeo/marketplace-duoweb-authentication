@@ -72,12 +72,10 @@
         <include name="nuxeo-generic-wss-handler*" />
       </fileset>
     </move>
-    <nx:rmdups dir="${outdir}/nxr/lib"/>
-    <!-- Temporary ZIP Nuxeo NXR to compare with base distribution NXR -->
-    <zip destfile="${outdir}/nxr-${marketplace.duoweb.authentication.version}.zip"
-         basedir="${outdir}/nxr"/>
+    <nx:rmdups dir="${outdir}/nxr/lib" />
 
-    <!-- Your MP only needs to include files not already provided by the base distribution -->
+    <zip destfile="${outdir}/nxr-${marketplace.duoweb.authentication.version}.zip"
+         basedir="${outdir}/nxr" />
     <nx:zipdiff file1="${outdir}/nxr-${marketplace.duoweb.authentication.version}.zip"
                 file2="${outdir}/nuxeo-distribution-dm-${nuxeo.distribution.version}.zip"
                 includesfile="${outdir}/includes"
@@ -142,11 +140,9 @@
     </copy>
 
     <zip destfile="${outdir}/${maven.project.artifactId}-${marketplace.duoweb.authentication.version}.zip"
-         basedir="${outdir}/marketplace"/>
-    <artifact:attach
-            file="${outdir}/${maven.project.artifactId}-${marketplace.duoweb.authentication.version}.zip"
-            target="${maven.project.groupId}:${maven.project.artifactId}"
-            type="zip"/>
+         basedir="${outdir}/marketplace" />
+    <artifact:attach file="${outdir}/${maven.project.artifactId}-${marketplace.duoweb.authentication.version}.zip"
+                     type="zip" />
   </target>
 
 </project>
