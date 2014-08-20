@@ -56,6 +56,9 @@
         <includes>
           <artifact groupId="org.nuxeo*" scope="!test" type="!pom" />
         </includes>
+        <excludes>
+          <artifact groupId="org.nuxeo.lib*" />
+        </excludes>
       </artifact:set>
     </copy>
     <!-- Third-party libraries -->
@@ -63,15 +66,10 @@
       <artifact:set>
         <includes>
           <artifact groupId="!org.nuxeo*" scope="!test" />
+          <artifact groupId="org.nuxeo.lib*" scope="!test" />
         </includes>
       </artifact:set>
     </copy>
-    <move todir="${outdir}/nxr/lib">
-      <fileset dir="${outdir}/nxr/bundles">
-        <include name="nuxeo-generic-wss-front*" />
-        <include name="nuxeo-generic-wss-handler*" />
-      </fileset>
-    </move>
     <nx:rmdups dir="${outdir}/nxr/lib" />
 
     <zip destfile="${outdir}/nxr-${marketplace.duoweb.authentication.version}.zip"
