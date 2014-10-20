@@ -16,7 +16,4 @@
   </platforms>
   <license>LGPL 2.1</license>
   <license-url>http://www.gnu.org/licenses/lgpl-2.1.html</license-url>
-  <dependencies>
-    <package>nuxeo-dm</package>
-  </dependencies>
 </package>

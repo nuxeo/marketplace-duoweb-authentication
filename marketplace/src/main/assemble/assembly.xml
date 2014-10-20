@@ -47,7 +47,7 @@
 
     <!-- Base distribution NXR -->
     <copy todir="${outdir}">
-      <artifact:resolveFile key="org.nuxeo.ecm.distribution:nuxeo-distribution-dm::zip" />
+      <artifact:resolveFile key="org.nuxeo.ecm.distribution:nuxeo-distribution-cap::zip" />
     </copy>
 
     <!-- Nuxeo bundles -->
@@ -75,15 +75,15 @@
     <zip destfile="${outdir}/nxr-${marketplace.duoweb.authentication.version}.zip"
          basedir="${outdir}/nxr" />
     <nx:zipdiff file1="${outdir}/nxr-${marketplace.duoweb.authentication.version}.zip"
-                file2="${outdir}/nuxeo-distribution-dm-${nuxeo.distribution.version}.zip"
+                file2="${outdir}/nuxeo-distribution-cap-${nuxeo.distribution.version}.zip"
                 includesfile="${outdir}/includes"
                 excludesfile="${outdir}/excludesfile"
-                patternsetid="duoweb.authentication.versus.dm"
+                patternsetid="duoweb.authentication.versus.cap"
                 ignoreContentPattern=".*\.jar$">
     </nx:zipdiff>
     <unzip src="${outdir}/nxr-${marketplace.duoweb.authentication.version}.zip"
            dest="${outdir}/marketplace/install">
-      <patternset refid="duoweb.authentication.versus.dm" />
+      <patternset refid="duoweb.authentication.versus.cap" />
     </unzip>
 
     <!-- Generate install.xml content -->
