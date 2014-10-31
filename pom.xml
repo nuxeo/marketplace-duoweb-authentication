@@ -4,7 +4,7 @@
   <parent>
     <groupId>org.nuxeo.ecm.distribution</groupId>
     <artifactId>nuxeo-distribution</artifactId>
-    <version>5.9.6-SNAPSHOT</version>
+    <version>6.0-SNAPSHOT</version>
   </parent>
 
   <groupId>org.nuxeo.marketplace.duoweb.authentication</groupId>
@@ -15,7 +15,7 @@
 
   <properties>
     <marketplace.duoweb.authentication.version>1.1.1-SNAPSHOT</marketplace.duoweb.authentication.version>
-    <nuxeo.distribution.version>5.9.6-SNAPSHOT</nuxeo.distribution.version>
+    <nuxeo.distribution.version>6.0-SNAPSHOT</nuxeo.distribution.version>
   </properties>
 
   <modules>
