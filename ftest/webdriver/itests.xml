@@ -13,7 +13,7 @@
             value="file:${out.dir}/marketplace-duoweb-authentication-${marketplace.duoweb.authentication.version}.zip" />
   <target name="prepare-environment" depends="_init,prepare-db,prepare-tomcat,prepare-jboss">
     <copy todir="${out.dir}">
-      <artifact:resolveFile key="org.nuxeo.marketplace.duoweb.authentication:marketplace-duoweb-authentication::zip" />
+      <artifact:file key="org.nuxeo.marketplace.duoweb.authentication:marketplace-duoweb-authentication::zip" />
     </copy>
   </target>
 
