@@ -5,7 +5,8 @@
 
   <property name="out.dir" value="${maven.project.build.directory}" />
   <property name="mp.install"
-            value="nuxeo-jsf-ui, file:${out.dir}/marketplace-duoweb-authentication-${marketplace.duoweb.authentication.version}.zip" />
+            value="file:${out.dir}/nuxeo-marketplace-jsf-ui-${nuxeo.distribution.version}.zip,
+    file:${out.dir}/marketplace-duoweb-authentication-${marketplace.duoweb.authentication.version}.zip" />
   <unzip dest="${out.dir}/" overwrite="false">
     <artifact:resolveFile key="org.nuxeo:nuxeo-ftest::zip" />
   </unzip>
@@ -13,6 +14,7 @@
 
   <target name="prepare-environment" depends="_init,prepare-db,prepare-tomcat">
     <copy todir="${out.dir}">
+      <artifact:file key="org.nuxeo.ecm.distribution:nuxeo-marketplace-jsf-ui::zip" />
       <artifact:file key="org.nuxeo.marketplace.duoweb.authentication:marketplace-duoweb-authentication::zip" />
     </copy>
   </target>
