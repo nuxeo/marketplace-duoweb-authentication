@@ -3,18 +3,18 @@
   <parent>
     <groupId>org.nuxeo.ecm.distribution</groupId>
     <artifactId>nuxeo-distribution</artifactId>
-    <version>8.10-SNAPSHOT</version>
+    <version>9.1-SNAPSHOT</version>
   </parent>
 
   <groupId>org.nuxeo.marketplace.duoweb.authentication</groupId>
   <artifactId>parent</artifactId>
   <packaging>pom</packaging>
   <name>DuoWeb Authentication Marketplace Package parent</name>
-  <version>1.4.3-SNAPSHOT</version>
+  <version>1.5.0-SNAPSHOT</version>
 
   <properties>
-    <marketplace.duoweb.authentication.version>1.4.3-SNAPSHOT</marketplace.duoweb.authentication.version>
-    <nuxeo.distribution.version>8.10-SNAPSHOT</nuxeo.distribution.version>
+    <marketplace.duoweb.authentication.version>1.5.0-SNAPSHOT</marketplace.duoweb.authentication.version>
+    <nuxeo.distribution.version>9.1-SNAPSHOT</nuxeo.distribution.version>
   </properties>
 
   <modules>
