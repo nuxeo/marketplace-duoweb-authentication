@@ -40,7 +40,7 @@
 
     <!-- Nuxeo bundles -->
     <copy todir="${outdir}/nxr/bundles" overwrite="true">
-      <artifact:set>
+      <artifact:dependencies key="org.nuxeo.duoweb.authentication:nuxeo-duoweb-authentication:::">
         <includes>
           <artifact groupId="org.nuxeo*" />
         </includes>
@@ -50,25 +50,29 @@
           <artifact scope="provided" />
           <artifact type="pom" />
         </excludes>
-      </artifact:set>
+      </artifact:dependencies>
     </copy>
     <!-- Third-party libraries -->
     <copy todir="${outdir}/nxr/lib" overwrite="true">
-      <artifact:set>
+      <artifact:dependencies key="org.nuxeo.duoweb.authentication:nuxeo-duoweb-authentication:::">
         <includes>
-          <artifact groupId="!org.nuxeo*" scope="!test" />
-          <artifact groupId="org.nuxeo.lib*" scope="!test" />
+          <artifact groupId="!org.nuxeo*" />
+          <artifact groupId="org.nuxeo.lib*" />
         </includes>
-      </artifact:set>
+        <excludes>
+          <artifact scope="test" />
+        </excludes>
+      </artifact:dependencies>
     </copy>
     <nx:rmdups dir="${outdir}/nxr/lib" />
-
     <zip destfile="${outdir}/nxr-${marketplace.duoweb.authentication.version}.zip" basedir="${outdir}/nxr" />
+    <!-- Diff against Nuxeo Server -->
     <nx:zipdiff file1="${outdir}/nxr-${marketplace.duoweb.authentication.version}.zip"
                 file2="${outdir}/nuxeo-nxr-server-${nuxeo.distribution.version}.zip"
                 includesfile="${outdir}/includes"
                 excludesfile="${outdir}/excludesfile"
                 patternsetid="duoweb.authentication.versus.server"
+                ignoreContent="false"
                 ignoreContentPattern=".*\.jar$">
     </nx:zipdiff>
     <unzip src="${outdir}/nxr-${marketplace.duoweb.authentication.version}.zip" dest="${outdir}/marketplace/install">
@@ -125,7 +129,7 @@
     </copy>
 
     <nx:studioExtraction todir="${outdir}/marketplace">
-      <fileset dir="${outdir}/marketplace/install/bundles"/>
+      <fileset dir="${outdir}/marketplace/install/bundles" />
     </nx:studioExtraction>
 
     <zip destfile="${outdir}/${maven.project.artifactId}-${marketplace.duoweb.authentication.version}.zip"
