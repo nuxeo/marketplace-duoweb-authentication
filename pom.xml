@@ -14,6 +14,7 @@
 
   <properties>
     <marketplace.duoweb.authentication.version>1.7.0-SNAPSHOT</marketplace.duoweb.authentication.version>
+    <nuxeo.target.version>${nuxeo.distribution.version}</nuxeo.target.version>
   </properties>
 
   <modules>
