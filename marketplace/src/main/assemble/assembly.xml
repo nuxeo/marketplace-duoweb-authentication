@@ -27,7 +27,7 @@
       <fileset dir="src/main/resources" />
       <filterset>
         <filter token="VERSION" value="${marketplace.duoweb.authentication.version}" />
-        <filter token="DISTRIB_VERSION" value="${nuxeo.distribution.version}" />
+        <filter token="TARGET_VERSION" value="${nuxeo.target.version}" />
       </filterset>
     </copy>
     <copy file="${outdir}/artifacts-duoweb-authentication.properties" todir="${outdir}/marketplace/install" />
