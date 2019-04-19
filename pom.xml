@@ -10,10 +10,10 @@
   <artifactId>parent</artifactId>
   <packaging>pom</packaging>
   <name>DuoWeb Authentication Marketplace Package parent</name>
-  <version>1.6.4-SNAPSHOT</version>
+  <version>1.6.5-SNAPSHOT</version>
 
   <properties>
-    <marketplace.duoweb.authentication.version>1.6.4-SNAPSHOT</marketplace.duoweb.authentication.version>
+    <marketplace.duoweb.authentication.version>1.6.5-SNAPSHOT</marketplace.duoweb.authentication.version>
     <nuxeo.target.version>10.10</nuxeo.target.version>
   </properties>
 
